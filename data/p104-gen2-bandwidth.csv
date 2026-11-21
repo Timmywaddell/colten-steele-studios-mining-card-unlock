@@ -1,0 +1,5 @@
+stage,pcie_gen,width,transfer_mib,repetitions,h2d_median_gbps,d2h_median_gbps,notes
+baseline,1,4,8,5,0.784,0.830,Original Gen1 measured
+gen2_first,2,4,8,5,1.544,1.665,Raw PCIe link 0x1042
+gen2_repeat,2,4,8,5,1.536,1.672,Independent repeat
+gen2_after_reboot_manual,2,4,8,5,1.544,1.669,Manual reactivation after reboot

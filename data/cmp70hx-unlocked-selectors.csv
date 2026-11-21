@@ -1,0 +1,4 @@
+state,selector,register_offset,observed_hex,intended_unlocked_hex,comparison,measurement_scope
+post_nvidia_cuda_gsp_off,PLM,0x00823804,0xffffffff,0xffffffff,MATCH,read_only_after_driver_and_cuda
+post_nvidia_cuda_gsp_off,SS0,0x0082381c,0x88888888,0x88888888,MATCH,read_only_after_driver_and_cuda
+post_nvidia_cuda_gsp_off,SS1,0x00823820,0x00000008,0x00000008,MATCH,read_only_after_driver_and_cuda

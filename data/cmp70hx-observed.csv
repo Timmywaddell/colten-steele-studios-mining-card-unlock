@@ -1,0 +1,5 @@
+workload,unit,gsp_on,gsp_off,scope
+bf16_4096_gemm,TFLOPS,37.518,35.045,GSP mode comparison; not locked vs unlocked
+fp16_4096_gemm,TFLOPS,34.554,34.345,GSP mode comparison; not locked vs unlocked
+qwen3_1p7b_single_decode,tokens_per_sec,36.54,36.37,GSP mode comparison; single-stream
+qwen3_1p7b_batch8_aggregate,tokens_per_sec,300.84,295.25,GSP mode comparison; aggregate across eight streams
