@@ -6,13 +6,17 @@
 
 This repository is organized **by card and by test**. We distinguish an upstream method we reproduced from a method we invented, a functional unlock-state observation from a proven performance gain, and direct PCIe bandwidth from application performance. **See the [reboot and restart evidence table](docs/reboot-status.md)** for the precise difference between P104's verified manual after-reboot activation and CMP 70HX's successful unlock reproduction on separate boot media.
 
+## Latest update — 27 November 2026
+
+**Project Queen:** a ฿1,430 P102-100 mining GPU is rendering GTA V at 1080p under Windows and powering our original Godot city development environment. See the [Windows gaming and Godot report](cards/p102-100.md) for observed frame rates, measured PCIe transfers, limitations and our upcoming local AI research. Independent reproductions and studio development collaborations are welcome.
+
 ## Research index
 
 | Card | Research status | Evidence | Report |
 |---|---|---|---|
 | NVIDIA P104-100 8 GB (GP104) | **Reproduced:** real PCIe Gen1 x4 → Gen2 x4; repeated after reboot/manual activation | Raw PCIe LNKSTA, CUDA pinned host-transfer rates, checksum-safe test | [Research note 01](cards/p104-100.md) |
 | NVIDIA CMP 70HX 8 GB (GA104) | **Unlocked state and tensor compute verified:** Zagitta method completed on two separate Linux USB boots; intended selector values read back after driver/CUDA; BF16/FP16 and Qwen3 work | Independent read-only PLM/SS0/SS1 values, BF16/FP16 CUDA arithmetic, Qwen3 inference. **No factory-locked-vs-unlocked speed gain measured** | [Research note 02](cards/cmp-70hx.md) |
-| NVIDIA P102-100 10 GB | **Awaiting test:** capacity is owner reported, not verified live | No performance result | [Test queue](ROADMAP.md) |
+| NVIDIA P102-100 10 GB (GP102) | **Windows GTA V and Godot rendering verified**; manual Gen2 transfer recovery measured | ~70–75 FPS GTA V at 1080p (owner observed); ~1.54 GB/s H2D and ~1.70 GB/s D2H; Godot Vulkan city and traffic functional | [Research note 03](cards/p102-100.md) |
 | Other CMP/P-series | Planned | No result | [Test queue](ROADMAP.md) |
 
 ## Key measured achievement: P104-100
