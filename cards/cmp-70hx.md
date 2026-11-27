@@ -9,6 +9,10 @@
 - Experimental USB Ubuntu 24.04.5, kernel 7.0.0-31-generic
 - NVIDIA proprietary 580.178.04; both CMP 70HX and GTX1660 Super recognized
 
+## Recorded build expenditure
+
+Harry's second-hand Core i7-6700, Gigabyte Z270X Ultra Gaming, 16 GB DDR4 and Cooler Master Hyper TX3 EVO cooler bundle cost ฿3,288 delivered. The owner confirms that the CMP 70HX cost ฿1,400 delivered. **Recorded combined expenditure: ฿4,688.** The GTX 1660 Super and Thermaltake 1650 W PSU were previously owned; this subtotal does not represent the replacement cost of a complete system. Other costs remain unverified.
+
 ## What succeeded
 
 The upstream [Zagitta gpu-unlock v2.0.0](https://github.com/Zagitta/gpu-unlock) procedure succeeded on **two separate experimental Linux USB boots**: first Lexar, then SanDisk. A later independent, read-only BAR observation on the SanDisk Linux session, **after the NVIDIA driver and CUDA initialized with GSP OFF**, confirmed the expected unlocked feature values:
