@@ -49,6 +49,10 @@ A separate Qwen3-30B-A3B IQ3_XXS model at 4096 context generated a short reply a
 
 A 512 MiB GPU-local copy test reported 562.24 GB/s combined read+write, corresponding to about 281.12 GB/s payload-copy throughput. It is **not PCIe bandwidth**. The observed PCIe link remained Gen1 x4; Gen2 has not been demonstrated on the 70HX.
 
+## Later recovery update — 27 November 2026
+
+The owner reports that the tensor unlock automatically restores on Linux reboot and remains usable. This extends the earlier two-boot functional evidence; the automatic-start and post-reboot readback receipts are not yet included in this report. This may be a pioneering implementation on this configuration; global precedence is unverified.
+
 ## What remains unknown
 
 - No same-card matched original locked/unlocked comparison.
