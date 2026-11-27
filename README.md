@@ -27,6 +27,10 @@ This repository is organized **by card and by test**. We distinguish an upstream
 
 Prices are owner-confirmed historical Thai baht expenditure, with Queen's total supported by the project ledger; not independently audited receipts or current retail replacement costs. Reused/free equipment is not valued at market price. Queen's AI performance is not yet measured.
 
+## Reversible, restart-recoverable research — our engineering standard
+
+Our goal is working solutions that survive ordinary use, with documented recovery after restart rather than one-off demonstrations. Dino and Harry have working Windows and Linux installations according to the owner; their Linux unlock evidence is documented separately. Dino demonstrated manual Gen2 recovery after reboot, Harry reproduced tensor unlocking on two Linux boot environments, and Queen demonstrated reversible Gen2 transfer behavior during a Windows session alongside GTA V and Godot rendering. Automatic Windows reboot recovery remains a distinct validation gate. We may be among the first to document this particular combination, but global priority is unverified. See the [recovery evidence matrix](docs/reboot-status.md) for exactly what each card has demonstrated.
+
 ## Research index
 
 | Card | Research status | Evidence | Report |
