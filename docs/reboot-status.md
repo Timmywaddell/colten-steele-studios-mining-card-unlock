@@ -17,6 +17,10 @@ Neither case requires that the GPU retains modified volatile registers physicall
 
 Our engineering objective is not a one-time unlock: it is a usable, reversible configuration that can be restored safely after restarting. The owner reports working Windows and Linux installations on both Dino and Harry. That is distinct from proving every unlock in both operating systems. For each card and OS, record a clean boot, driver initialization, baseline, activation, hardware readback where available, integrity-checked workload, and a subsequent restart/recovery. Where live stop and reactivation are supported, document them separately. Do not assume a safe live transition during an active GPU workload. Publish exact versions, rollback guidance and evidence of any required manual step. Use “may be a first” only as a qualified hypothesis, never an established global precedence claim.
 
+## Later owner-confirmed recovery milestones — 27 November 2026
+
+The owner confirms that Harry's CMP 70HX tensor unlock automatically returns on Linux reboot and remains usable, that Dino's P104 Gen2 unlock is recoverable after Linux reboot, and that Queen now has a rebootable Windows unlock configuration. These are later operational reports, distinct from the earlier captured benchmarks in the table. A dated automatic-start log and post-reboot workload/readback sequence for Harry and Queen should accompany a formal independent replication. The earlier measured Windows live stop/reactivation sequence is already documented. We may be among the first to combine these capabilities across these specific configurations; global precedence remains unverified.
+
 ## Important interpretation
 
 **P104:** Proven *manual after-reboot reactivation*, not a permanently fused or auto-started link upgrade.
