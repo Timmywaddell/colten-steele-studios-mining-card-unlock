@@ -10,6 +10,23 @@ This repository is organized **by card and by test**. We distinguish an upstream
 
 **Project Queen:** a ฿1,430 P102-100 mining GPU is rendering GTA V at 1080p under Windows and powering our original Godot city development environment. See the [Windows gaming and Godot report](cards/p102-100.md) for observed frame rates, measured PCIe transfers, limitations and our upcoming local AI research. Independent reproductions and studio development collaborations are welcome.
 
+## Budget gaming and local AI workstations — three systems, ฿23,261 in recorded spending
+
+| Workstation | Mining GPU | GPU purchase | Recorded system/project cost | Demonstrated work |
+|---|---|---:|---:|---|
+| Dino | P104-100 8 GB | ฿800 | ฿6,260 | Linux gaming, PCIe research |
+| Harry | CMP 70HX 8 GB | ฿1,400 | ฿10,288 | Tensor compute and local AI inference |
+| Queen | P102-100 10 GB | ฿1,430 | ฿6,713 | Windows gaming and Godot; AI evaluation planned |
+| **Total** | | | **฿23,261** | |
+
+**Dino:** motherboard with 8 GB RAM and cooler ฿1,000; CPU ฿1,400; P104 ฿800; SSD ฿580; PSU ฿1,400; three fans ฿80; case ฿1,000. Mechanical drives, cabling and remaining components supplied free.
+
+**Harry:** motherboard, CPU, 16 GB RAM and cooler bundle ฿3,288; CMP 70HX ฿1,400; case ฿1,200; GTX 1660 Super ฿3,200; PSU ฿1,200.
+
+**Queen:** earlier project spending ฿5,200, updated committed total ฿6,713 including NVMe, delivery and a ฿190 Studio replacement PSU. GT 1030, fans, mechanical drives, keyboard and mouse supplied free.
+
+Prices are owner-confirmed historical Thai baht expenditure, with Queen's total supported by the project ledger; not independently audited receipts or current retail replacement costs. Reused/free equipment is not valued at market price. Queen's AI performance is not yet measured.
+
 ## Research index
 
 | Card | Research status | Evidence | Report |
