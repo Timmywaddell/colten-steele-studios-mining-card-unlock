@@ -10,8 +10,8 @@ Neither case requires that the GPU retains modified volatile registers physicall
 |---|---|---|---|
 | **NVIDIA P104-100 8 GB** | **YES.** A real WD Linux reboot returned the GPU to Gen1 ×4, then a guarded manual one-shot activation restored physical Gen2 ×4. A new 8 MiB ×5 CUDA copy benchmark passed at H2D 1.544 / D2H 1.669 GB/s. | Raw link status 0x1042 confirmed again after CUDA initialization; temporary kernel hook removed and original driver file on disk retained. | **NO.** The systemd unit is intentionally manual/static. |
 | **NVIDIA CMP 70HX 8 GB** | **YES, for independent boot reproduction.** The upstream Zagitta kernel procedure reported successful unlock on an original Lexar Linux boot and again on a distinct SanDisk Linux boot. | On SanDisk with NVIDIA proprietary driver 580.178.04 and CUDA initialized and GSP turned off, **PLM=FFFFFFFF, SS0=88888888, SS1=00000008** matched the intended unlocked state in independent read-only checks. Real BF16/FP16 tensor calculations and Qwen3 inference passed. | **NOT TESTED.** Automatic reactivation after every restart, and same-media repeat after a controlled fresh power cycle, were not separately accepted as test gates. |
+| **NVIDIA P102-100 10 GB** | **YES: automatic recovery after a real Windows restart/sign-in on 27 November 2026.** Earlier live stop/reactivation also verified. | Fresh endpoint and root Gen2 ×4, training=false; five pinned trials H2D 1.542–1.551 and D2H 1.669–1.673 GB/s; pageable/pinned integrity PASS; CUDA arithmetic zero errors. | **YES, one measured restart.** Existing logon task automatically recovered and validated the link. Owner confirmed usability. Cold power-cycle, repeated-cycle endurance and new controlled gaming benchmarks remain open. |
 
-| **NVIDIA P102-100 10 GB** | **Windows live stop/reactivation verified.** Fresh-reboot end-to-end validation remains a separate gate. | Endpoint and root read Gen2 x4 before stopping; median pinned H2D/D2H fell to 0.797/0.841 GB/s after stopping and recovered to 1.546/1.680 GB/s after reactivation, without reboot. Integrity passed; post-stop link register was not separately read. GTA V and Godot rendered on the P102 through the GT 1030. | **NOT YET VERIFIED.** Logon startup registration was recorded; automatic successful recovery through a fresh boot with measured transfers and rendering still requires confirmation. |
 
 ## Project-wide recovery standard
 
@@ -19,7 +19,27 @@ Our engineering objective is not a one-time unlock: it is a usable, reversible c
 
 ## Later owner-confirmed recovery milestones — 27 November 2026
 
-The owner confirms that Harry's CMP 70HX tensor unlock automatically returns on Linux reboot and remains usable, that Dino's P104 Gen2 unlock is recoverable after Linux reboot, and that Queen now has a rebootable Windows unlock configuration. These are later operational reports, distinct from the earlier captured benchmarks in the table. A dated automatic-start log and post-reboot workload/readback sequence for Harry and Queen should accompany a formal independent replication. The earlier measured Windows live stop/reactivation sequence is already documented. We may be among the first to combine these capabilities across these specific configurations; global precedence remains unverified.
+The owner confirms that Harry's CMP 70HX tensor unlock automatically returns on Linux reboot and remains usable, that Dino's P104 Gen2 unlock is recoverable after Linux reboot, and that Queen now has a rebootable Windows unlock configuration. These are later operational reports, distinct from the earlier captured benchmarks in the table. Queen's later dated automatic-start, PCI readback and CUDA sequence is now recorded below. Harry's automatic-recovery claim remains owner-reported pending its separate dated evidence. The earlier measured Windows live stop/reactivation sequence is already documented. We may be among the first to combine these capabilities across these specific configurations; global precedence remains unverified.
+
+## Verified Windows reboot recovery — 27 November 2026
+
+**SUCCESS: Queen automatically restored PCIe Gen2 ×4 after a real Windows restart and user sign-in.** This is measured automatic recovery on this configuration, not physical retention of volatile GPU settings.
+
+The recorded boot was 05:39:24 PST (13:39:24 UTC). The scheduled recovery completed at 05:40:29 PST; a separate live read at 05:40:55 PST confirmed fresh status, both endpoint and root port at Gen2 ×4, and training=false. No manual post-reboot activation was needed in this acceptance run.
+
+| Post-reboot check | Result |
+|---|---|
+| Endpoint and root port | Gen2 ×4 at both ends; training=false |
+| Pinned CUDA H2D, five trials | 1.548, 1.551, 1.542, 1.548, 1.542 GB/s |
+| Pinned CUDA D2H, five trials | 1.672, 1.673, 1.673, 1.669, 1.673 GB/s |
+| Transfer integrity | Pageable and pinned PASS |
+| CUDA arithmetic | 32 values, zero errors |
+| Display drivers | NVIDIA 582.78 unchanged on both adapters |
+| Owner acceptance | Owner confirmed everything working after restart |
+
+The existing Windows logon task waits 30 seconds, checks the recovery wrapper's hash, starts the exact existing driver services when stopped, invokes the original community launcher once, verifies fresh PCI status, runs CUDA transfer and arithmetic checks, and verifies PCI state again. It refuses recovery during an active game and logs failures instead of repeatedly launching. This describes the validated sequence; it is not a portable installer or a reason to apply Queen's configuration to other hardware. Credit for the upstream P102 method remains with [KODAMA Technology](https://github.com/KODAMA-TECHNOLOGY/P102-PCIE2.0ULOCKER).
+
+**Scope:** one measured Windows restart/sign-in recovery on Queen. Cold power-cycle and repeated-cycle endurance remain to be tested. The short CUDA check is not sustained stability qualification. Post-reboot usability is owner-confirmed; no new controlled FPS, AI throughput or independent graphics capture is claimed. The earlier live stop/reactivation measurements remain valid as a separate experiment.
 
 ## Important interpretation
 
