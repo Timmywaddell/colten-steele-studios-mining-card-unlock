@@ -11,7 +11,18 @@
 
 ## Recorded build expenditure
 
-Harry's second-hand Core i7-6700, Gigabyte Z270X Ultra Gaming, 16 GB DDR4 and Cooler Master Hyper TX3 EVO cooler bundle cost ฿3,288 delivered. The owner confirms that the CMP 70HX cost ฿1,400 delivered. **Recorded combined expenditure: ฿4,688.** The GTX 1660 Super and Thermaltake 1650 W PSU were previously owned; this subtotal does not represent the replacement cost of a complete system. Other costs remain unverified.
+Harry's complete owner-confirmed purchase cost is **฿10,288**, including the second-hand components acquired before the current research project.
+
+| Component | Purchase cost (THB) |
+|---|---:|
+| Core i7-6700, Gigabyte Z270X Ultra Gaming, 16 GB DDR4 and Cooler Master Hyper TX3 EVO cooler bundle (delivered) | 3,288 |
+| CMP 70HX 8 GB (delivered) | 1,400 |
+| Case (delivered) | 1,200 |
+| GTX 1660 Super | 3,200 |
+| Thermaltake M1650 power supply | 1,200 |
+| **Total** | **10,288** |
+
+These are historical local second-hand purchase prices, not current retail quotes or guaranteed replication costs.
 
 ## What succeeded
 
