@@ -6,9 +6,19 @@
 
 This repository is organized **by card and by test**. We distinguish an upstream method we reproduced from a method we invented, a functional unlock-state observation from a proven performance gain, and direct PCIe bandwidth from application performance. **See the [reboot and restart evidence table](docs/reboot-status.md)** for the precise difference between P104's verified manual after-reboot activation and CMP 70HX's successful unlock reproduction on separate boot media.
 
-## Latest update — 27 November 2026
+## Latest update — 28 November 2026: Project Queen, from mining GPU to local AI workstation
 
-**Project Queen:** a ฿1,430 P102-100 mining GPU is rendering GTA V at 1080p under Windows and powering our original Godot city development environment. See the [Windows gaming and Godot report](cards/p102-100.md) for observed frame rates, measured PCIe transfers, limitations and our upcoming local AI research. Independent reproductions and studio development collaborations are welcome.
+**Full 27B reasoning on a THB 1,430 mining GPU.** Queen now runs Bonsai 2.5 27B with 32K configured context on the P102-100, plus persistent CUDA Whisper on a separate GT 1030, on Windows with only 8 GB RAM. Measured decode: 18.94 tokens/s. A later snapshot retained ~5.5 GiB available RAM with both engines resident. The current run recorded 3,049/3,049 sampled physical Gen2 x4 observations across 2 h 36 min.
+
+- [Queen Windows AI: measured results, exact configuration and replication recipe](docs/queen-windows-ai.md)
+- [Measurement CSV](data/queen-ai-20261128.csv) · [Complete 3,049-row sanitized PCIe trace](data/queen-physical-pcie-20261128.csv)
+- [Replicate, report a failure or correct our findings](https://github.com/Timmywaddell/colten-steele-studios-mining-card-unlock/issues)
+
+We might be among the first to document this particular Windows mining-GPU gaming, Godot and dual-GPU AI configuration; worldwide precedence is unverified. No MTP speed claim, full-context recall claim, or measured Blender performance yet. The complete new AI/game reboot sequence still needs fresh acceptance.
+
+## Earlier update — 27 November 2026
+
+**Project Queen:** a ฿1,430 P102-100 mining GPU is rendering GTA V at 1080p under Windows and powering our original Godot city development environment. See the [Windows gaming and Godot report](cards/p102-100.md) for observed frame rates, measured PCIe transfers, limitations and the new [local AI research](docs/queen-windows-ai.md). Independent reproductions and studio development collaborations are welcome.
 
 **Reboot success — 27 November:** automatic Windows logon recovery restored Gen2 ×4 at both PCI ends; five pinned CUDA trials passed at 1.542–1.551 GB/s H2D and 1.669–1.673 GB/s D2H, with zero arithmetic errors. The owner confirmed everything working after reboot. [Read the measured acceptance record](docs/reboot-status.md#verified-windows-reboot-recovery--27-november-2026).
 
@@ -18,7 +28,7 @@ This repository is organized **by card and by test**. We distinguish an upstream
 |---|---|---:|---:|---|
 | Dino | P104-100 8 GB | ฿800 | ฿6,260 | Linux gaming, PCIe research |
 | Harry | CMP 70HX 8 GB | ฿1,400 | ฿10,288 | Tensor compute and local AI inference |
-| Queen | P102-100 10 GB | ฿1,430 | ฿6,713 | Windows gaming and Godot; AI evaluation planned |
+| Queen | P102-100 10 GB | ฿1,430 | ฿6,713 | Windows gaming, Godot, 27B local AI + GPU speech |
 | **Total** | | | **฿23,261** | |
 
 **Dino:** motherboard with 8 GB RAM and cooler ฿1,000; CPU ฿1,400; P104 ฿800; SSD ฿580; PSU ฿1,400; three fans ฿80; case ฿1,000. Mechanical drives, cabling and remaining components supplied free.
@@ -27,7 +37,7 @@ This repository is organized **by card and by test**. We distinguish an upstream
 
 **Queen:** earlier project spending ฿5,200, updated committed total ฿6,713 including NVMe, delivery and a ฿190 Studio replacement PSU. GT 1030, fans, mechanical drives, keyboard and mouse supplied free.
 
-Prices are owner-confirmed historical Thai baht expenditure, with Queen's total supported by the project ledger; not independently audited receipts or current retail replacement costs. Reused/free equipment is not valued at market price. Queen's AI performance is not yet measured.
+Prices are owner-confirmed historical Thai baht expenditure, with Queen's total supported by the project ledger; not independently audited receipts or current retail replacement costs. Reused/free equipment is not valued at market price. Queen's AI measurements are now [published separately](docs/queen-windows-ai.md).
 
 ## Reversible, restart-recoverable research — our engineering standard
 
@@ -39,7 +49,7 @@ Our goal is working solutions that survive ordinary use, with documented recover
 |---|---|---|---|
 | NVIDIA P104-100 8 GB (GP104) | **Reproduced:** real PCIe Gen1 x4 → Gen2 x4; repeated after reboot/manual activation | Raw PCIe LNKSTA, CUDA pinned host-transfer rates, checksum-safe test | [Research note 01](cards/p104-100.md) |
 | NVIDIA CMP 70HX 8 GB (GA104) | **Unlocked state and tensor compute verified:** Zagitta method completed on two separate Linux USB boots; intended selector values read back after driver/CUDA; BF16/FP16 and Qwen3 work | Independent read-only PLM/SS0/SS1 values, BF16/FP16 CUDA arithmetic, Qwen3 inference. **No factory-locked-vs-unlocked speed gain measured** | [Research note 02](cards/cmp-70hx.md) |
-| NVIDIA P102-100 10 GB (GP102) | **Windows automatic Gen2 reboot recovery verified**, alongside prior GTA V and Godot rendering | ~70–75 FPS GTA V at 1080p (owner observed); ~1.54 GB/s H2D and ~1.70 GB/s D2H; Godot Vulkan city and traffic functional | [Research note 03](cards/p102-100.md) |
+| NVIDIA P102-100 10 GB (GP102) | **Windows automatic Gen2 reboot recovery verified**, alongside GTA V, Godot rendering and new 27B AI evidence | ~70–75 FPS GTA V at 1080p (owner observed); ~1.54 GB/s H2D and ~1.70 GB/s D2H; Godot Vulkan city and traffic functional | [Research note 03](cards/p102-100.md) |
 | Other CMP/P-series | Planned | No result | [Test queue](ROADMAP.md) |
 
 ## Key measured achievement: P104-100
