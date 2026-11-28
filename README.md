@@ -1,5 +1,27 @@
 # Colten Steele Studios Mining Card Unlock Project
 
+## $42 mining GPU. Full 27B AI. 1080p Windows gaming.
+
+**Project Queen:** an approximately $198 secondhand Windows workstation combining a P102-100, a GT 1030, and just 8 GB of system RAM.
+
+| What we achieved | Evidence |
+|---|---|
+| Bonsai 2.5 27B on the P102-100 | **18.94 tokens/s**, 32K configured context |
+| Two independent local AI engines | Persistent CUDA Whisper on the GT 1030 alongside Bonsai |
+| Memory optimization | Approximately 5.5 GiB available RAM in a later dual-AI snapshot |
+| Windows mining-GPU PCIe Gen2 x4 | **3,049/3,049 sampled physical endpoint/root observations** over 2 h 36 min |
+| GTA V on the same Windows PC | **70–75 FPS at 1080p**, owner-observed, not a controlled average |
+| Original game development | Godot Vulkan city and traffic functionality verified |
+| Automatic Windows Gen2 recovery | One measured restart/sign-in with CUDA integrity PASS |
+
+**Potential first documented combination:** Windows mining-GPU gaming, original game development, full 27B local AI and independent GPU speech on this low-cost configuration. Our measured results are documented; global priority remains open to independent evidence. We credit the original unlock and AI projects.
+
+**Reproduce it:** [Exact configuration and commands](docs/queen-windows-ai.md) · [Benchmark CSV](data/queen-ai-20261128.csv) · [Full PCIe trace](data/queen-physical-pcie-20261128.csv) · [Windows gaming guide](cards/p102-100.md) · [Join the community replication challenge](https://github.com/Timmywaddell/colten-steele-studios-mining-card-unlock/issues/1).
+
+*Prices are approximate historical USD equivalents, including reused equipment. No universal installer, full-length context benchmark or absolute world-first claim.*
+
+---
+
 **Three documented experimental mining-GPU milestones:** Queen's P102-100 automatically recovered Gen2 ×4 after a Windows restart/sign-in with passing PCI and CUDA checks;  the P104-100 physically regained PCIe Gen2 ×4 after reboot through a guarded manual reactivation, while the CMP 70HX reproduced a GA104 tensor-unlock procedure across two Linux USB boots, retained the intended unlocked selector values after NVIDIA/CUDA initialization, and performed real BF16/FP16 tensor calculations and AI inference.
 
 **Public research site:** [Colten Steele Studios Mining Card Unlock Project](https://headless-fzilvlsgnve-timmywaddell1-140d.wix-site-host.com)
