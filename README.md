@@ -8,7 +8,7 @@ This repository is organized **by card and by test**. We distinguish an upstream
 
 ## Latest update — 28 November 2026: Project Queen, from mining GPU to local AI workstation
 
-**Full 27B reasoning on a THB 1,430 mining GPU.** Queen now runs Bonsai 2.5 27B with 32K configured context on the P102-100, plus persistent CUDA Whisper on a separate GT 1030, on Windows with only 8 GB RAM. Measured decode: 18.94 tokens/s. A later snapshot retained ~5.5 GiB available RAM with both engines resident. The current run recorded 3,049/3,049 sampled physical Gen2 x4 observations across 2 h 36 min.
+**Full 27B reasoning on a $42 mining GPU.** Queen now runs Bonsai 2.5 27B with 32K configured context on the P102-100, plus persistent CUDA Whisper on a separate GT 1030, on Windows with only 8 GB RAM. Measured decode: 18.94 tokens/s. A later snapshot retained ~5.5 GiB available RAM with both engines resident. The current run recorded 3,049/3,049 sampled physical Gen2 x4 observations across 2 h 36 min.
 
 - [Queen Windows AI: measured results, exact configuration and replication recipe](docs/queen-windows-ai.md)
 - [Measurement CSV](data/queen-ai-20261128.csv) · [Complete 3,049-row sanitized PCIe trace](data/queen-physical-pcie-20261128.csv)
@@ -18,26 +18,28 @@ We might be among the first to document this particular Windows mining-GPU gamin
 
 ## Earlier update — 27 November 2026
 
-**Project Queen:** a ฿1,430 P102-100 mining GPU is rendering GTA V at 1080p under Windows and powering our original Godot city development environment. See the [Windows gaming and Godot report](cards/p102-100.md) for observed frame rates, measured PCIe transfers, limitations and the new [local AI research](docs/queen-windows-ai.md). Independent reproductions and studio development collaborations are welcome.
+**Project Queen:** a $42 P102-100 mining GPU is rendering GTA V at 1080p under Windows and powering our original Godot city development environment. See the [Windows gaming and Godot report](cards/p102-100.md) for observed frame rates, measured PCIe transfers, limitations and the new [local AI research](docs/queen-windows-ai.md). Independent reproductions and studio development collaborations are welcome.
 
 **Reboot success — 27 November:** automatic Windows logon recovery restored Gen2 ×4 at both PCI ends; five pinned CUDA trials passed at 1.542–1.551 GB/s H2D and 1.669–1.673 GB/s D2H, with zero arithmetic errors. The owner confirmed everything working after reboot. [Read the measured acceptance record](docs/reboot-status.md#verified-windows-reboot-recovery--27-november-2026).
 
-## Budget gaming and local AI workstations — three systems, ฿23,261 in recorded spending
+## Budget gaming and local AI workstations — three systems, about $686 in recorded spending
 
 | Workstation | Mining GPU | GPU purchase | Recorded system/project cost | Demonstrated work |
 |---|---|---:|---:|---|
-| Dino | P104-100 8 GB | ฿800 | ฿6,260 | Linux gaming, PCIe research |
-| Harry | CMP 70HX 8 GB | ฿1,400 | ฿10,288 | Tensor compute and local AI inference |
-| Queen | P102-100 10 GB | ฿1,430 | ฿6,713 | Windows gaming, Godot, 27B local AI + GPU speech |
-| **Total** | | | **฿23,261** | |
+| Dino | P104-100 8 GB | $24 | $185 | Linux gaming, PCIe research |
+| Harry | CMP 70HX 8 GB | $41 | $303 | Tensor compute and local AI inference |
+| Queen | P102-100 10 GB | $42 | $198 | Windows gaming, Godot, 27B local AI + GPU speech |
+| **Total** | | | **$686** | |
 
-**Dino:** motherboard with 8 GB RAM and cooler ฿1,000; CPU ฿1,400; P104 ฿800; SSD ฿580; PSU ฿1,400; three fans ฿80; case ฿1,000. Mechanical drives, cabling and remaining components supplied free.
+**Dino:** motherboard with 8 GB RAM and cooler $29; CPU $41; P104 $24; SSD $17; PSU $41; three fans $2; case $29. Mechanical drives, cabling and remaining components supplied free.
 
-**Harry:** motherboard, CPU, 16 GB RAM and cooler bundle ฿3,288; CMP 70HX ฿1,400; case ฿1,200; GTX 1660 Super ฿3,200; PSU ฿1,200.
+**Harry:** motherboard, CPU, 16 GB RAM and cooler bundle $97; CMP 70HX $41; case $35; GTX 1660 Super $94; PSU $35.
 
-**Queen:** earlier project spending ฿5,200, updated committed total ฿6,713 including NVMe, delivery and a ฿190 Studio replacement PSU. GT 1030, fans, mechanical drives, keyboard and mouse supplied free.
+**Queen:** earlier project spending $153 updated committed total $198 including NVMe, delivery and a $6 Studio replacement PSU. GT 1030, fans, mechanical drives, keyboard and mouse supplied free.
 
-Prices are owner-confirmed historical Thai baht expenditure, with Queen's total supported by the project ledger; not independently audited receipts or current retail replacement costs. Reused/free equipment is not valued at market price. Queen's AI measurements are now [published separately](docs/queen-windows-ai.md).
+All prices are approximate US-dollar equivalents of historical recorded spending, converted using the 27 November 2026 closing exchange rate. Rounded amounts may not sum exactly; reused/free components are not assigned a retail value.
+
+Prices are owner-confirmed historical expenditure expressed in approximate USD, with Queen's total supported by the project ledger; not independently audited receipts or current retail replacement costs. Reused/free equipment is not valued at market price. Queen's AI measurements are now [published separately](docs/queen-windows-ai.md).
 
 ## Reversible, restart-recoverable research — our engineering standard
 
