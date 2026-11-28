@@ -11,18 +11,20 @@
 
 ## Recorded build expenditure
 
-Harry's complete owner-confirmed purchase cost is **฿10,288**, including the second-hand components acquired before the current research project.
+All prices are approximate US-dollar equivalents of historical recorded spending, converted using the 27 November 2026 closing exchange rate. Rounded amounts may not sum exactly; reused/free components are not assigned a retail value.
 
-| Component | Purchase cost (THB) |
+Harry's complete owner-confirmed purchase cost is **$303**, including the second-hand components acquired before the current research project.
+
+| Component | Purchase cost (approx. USD) |
 |---|---:|
-| Core i7-6700, Gigabyte Z270X Ultra Gaming, 16 GB DDR4 and Cooler Master Hyper TX3 EVO cooler bundle (delivered) | 3,288 |
-| CMP 70HX 8 GB (delivered) | 1,400 |
-| Case (delivered) | 1,200 |
-| GTX 1660 Super | 3,200 |
-| Thermaltake M1650 power supply | 1,200 |
-| **Total** | **10,288** |
+| Core i7-6700, Gigabyte Z270X Ultra Gaming, 16 GB DDR4 and Cooler Master Hyper TX3 EVO cooler bundle (delivered) | $96.93 |
+| CMP 70HX 8 GB (delivered) | $41.27 |
+| Case (delivered) | $35.38 |
+| GTX 1660 Super | $94.34 |
+| Thermaltake M1650 power supply | $35.38 |
+| **Total** | **$303.30** |
 
-These are historical local second-hand purchase prices, not current retail quotes or guaranteed replication costs.
+These are historical secondhand purchase prices, not current retail quotes or guaranteed replication costs.
 
 ## What succeeded
 
