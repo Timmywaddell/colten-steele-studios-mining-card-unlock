@@ -32,7 +32,9 @@ A second-hand mining GPU can become a useful Windows workstation for 1080p gamin
 | Model | Ternary-Bonsai-2.5-27B-PTQ1_0.gguf, 5,993,834,848 bytes |
 | Speech | whisper.cpp v1.7.6 CUDA 12.4, multilingual base model |
 | Cooling | 70% fan targets; AI thermal stop 70 C; factory P102 250 W limit, no overclock |
-| Recorded cash cost | THB 1,430 P102; THB 6,713 project expenditure including reused/free parts (not full retail replacement value) |
+| Recorded cash cost | $42 P102; $198 project expenditure including reused/free parts (not full retail replacement value) |
+
+All prices are approximate US-dollar equivalents of historical recorded spending, converted using the 27 November 2026 closing exchange rate. Rounded amounts may not sum exactly; reused/free components are not assigned a retail value.
 
 ## Evidence and results
 
